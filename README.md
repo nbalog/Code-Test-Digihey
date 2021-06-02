@@ -23,13 +23,13 @@ Run ``` npm install" ``` inside this project folder to install all dependencies.
 ### Write to sources.list.d
 ``` echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list ```
 ### Install MongoDB
-``` sudo apt install mongodb-org ```
+``` sudo apt install mongodb-org ```  
+### Start MongoDB on localhost
+``` sudo systemctl start mongod.service ```
 ### Import JSON to MongoDB
 ``` mongoimport --jsonArray -d DATABASE_NAME --collection cars --file 'PATH TO VehicleInfo.json' ```
 
 # Run
-### Start MongoDB on localhost
-``` sudo systemctl start mongod.service ```
 ### Run backend  
 ``` npm run start:server ```
 ### Run frontend
