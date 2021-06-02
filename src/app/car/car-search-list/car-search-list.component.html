@@ -11,13 +11,10 @@
             <div class="row justify-content-center">
             <div class="col-md-4">
               <div class="form-group">
-                <label>Make</label>
-                <select formControlName="makeC" class="form-control">
-                  <option value="" disabled selected hidden>Make</option>
-                  <option value="">All</option>
-                  <option value="BMW">BMW</option>
-                  <option value="standard_40">Standard 40</option>
-                </select>
+                <div class="form-group">
+                  <label>Make</label>
+                  <input type="text" formControlName="makeC" class="form-control">
+                </div>
               </div>
             </div>
             <div class="col-md-4">
@@ -54,9 +51,6 @@
             <p>Make: {{car.make}}</p>
             <p>Model: {{car.model}}</p>
             <p>Year: {{car.year}}</p>
-            <div class="row justify-content-center h2" *ngIf="userIsAuthenticated">
-              <button mat-button color="warn" (click)="onDelete(car.id)">DELETE</button>
-            </div>
           </mat-expansion-panel>
         </div>
       </div>
