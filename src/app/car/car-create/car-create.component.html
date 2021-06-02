@@ -1,0 +1,29 @@
+<div class="container-fluid pages-rule">
+  <div class="row justify-content-center h2">
+    <h2>Create car</h2>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <mat-card class="mat-card-form">
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+        <form [formGroup]="carForm" (submit)="onSaveCar()">
+          <div class="form-group">
+            <input type="text" formControlName="make" placeholder="Make" class="form-control">
+            <div class="error" *ngIf="submitted && carForm.controls.make.errors?.required">Make is required</div>
+          </div>
+          <div class="form-group">
+            <input type="text" formControlName="model" placeholder="Model" class="form-control">
+            <div class="error" *ngIf="submitted && carForm.controls.model.errors?.required">Model is required</div>
+          </div>
+          <div class="form-group">
+            <input type="number" formControlName="year" placeholder="Year" class="form-control">
+            <div class="error" *ngIf="submitted && carForm.controls.year.errors?.required">Year is required</div>
+          </div>
+          <div class="row justify-content-center">
+            <button type="submit" *ngIf="!isLoading" class="btn btn-dark">Add car</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

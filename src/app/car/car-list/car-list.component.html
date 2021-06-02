@@ -1,0 +1,30 @@
+<div class="container-fluid pages">
+  <div class="row justify-content-center h2">
+    <h2>Car list</h2>
+  </div>
+  <div class="container cont-pages">
+    <mat-card>
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+      <div class="container">
+        <div class="row justify-content-center">
+          <mat-expansion-panel *ngFor="let car of cars">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{car.make + "&nbsp;" + car.model}}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>Make: {{car.make}}</p>
+            <p>Model: {{car.model}}</p>
+            <p>Year: {{car.year}}</p>
+            <div class="row justify-content-center h2" *ngIf="userIsAuthenticated">
+              <button mat-button color="warn" (click)="onDelete(car.id)">DELETE</button>
+            </div>
+          </mat-expansion-panel>
+        </div>
+      </div>
+      <mat-paginator [length]="totalCars" [pageSize]="carsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)"
+        *ngIf="cars.length > 0">
+      </mat-paginator>
+    </mat-card>
+  </div>
+</div>

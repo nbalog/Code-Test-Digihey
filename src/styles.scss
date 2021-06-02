@@ -1,0 +1,63 @@
+@import "~awesome-notifications/src/styles/style";
+
+@font-face {
+  font-family: "Font";
+  src: url("/assets/fonts/Montserrat-Medium.otf");
+}
+
+/*Layout*/
+body {
+  font-family: "Font";
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  font-family: "Font";
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: blue;
+}
+
+.header {
+  height: 700px;
+  padding: 3rem 0 0 0;
+}
+
+.footer-row {
+  background-color: #000;
+}
+
+.footer {
+  padding: 3rem 0 0 0;
+  height: 300px;
+  color: #FFF;
+}
+
+.pages-rule {
+  margin: 2rem 0 2rem 0;
+  min-height: 40rem;
+}
+
+.h2 {
+  margin: 1rem 0 1rem 0;
+}
+
+/*Forms*/
+.form {
+  width: 100%;
+}
+
+.mat-card-form {
+  width: 30rem;
+}
+
+.error {
+  color: red;
+  font-size: smaller;
+}
