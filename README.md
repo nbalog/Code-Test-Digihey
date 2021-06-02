@@ -25,7 +25,7 @@ Run ``` npm install" ``` inside this project folder to install all dependencies.
 ### Install MongoDB
 ``` sudo apt install mongodb-org ```
 ### Import JSON to MongoDB
-``` mongoimport --jsonArray -d DATABASE_NAME --collection car --file 'PATH TO VehicleInfo.json' ```
+``` mongoimport --jsonArray -d DATABASE_NAME --collection cars --file 'PATH TO VehicleInfo.json' ```
 
 # Run
 ### Start MongoDB on localhost
@@ -37,10 +37,10 @@ Run ``` npm install" ``` inside this project folder to install all dependencies.
 
 # Routes
 ## Public
-http://localhost:4200/auth/signup   
-http://localhost:4200/auth/login
-http://localhost:4200/listCars
-http://localhost:4200/searchCars
+http://localhost:4200/auth/signup     
+http://localhost:4200/auth/login  
+http://localhost:4200/listCars  
+http://localhost:4200/searchCars  
 
 ## Auth
 http://localhost:4200/addCar
